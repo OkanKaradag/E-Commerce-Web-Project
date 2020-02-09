@@ -1,0 +1,8 @@
+C:\Users\Mehmet Hamza\Desktop\Projects\E-Commerce-Web-Project\ShopApp\ShopApp.Entities\bin\Debug\netcoreapp3.1\ShopApp.Entities.deps.json
+C:\Users\Mehmet Hamza\Desktop\Projects\E-Commerce-Web-Project\ShopApp\ShopApp.Entities\bin\Debug\netcoreapp3.1\ShopApp.Entities.dll
+C:\Users\Mehmet Hamza\Desktop\Projects\E-Commerce-Web-Project\ShopApp\ShopApp.Entities\bin\Debug\netcoreapp3.1\ShopApp.Entities.pdb
+C:\Users\Mehmet Hamza\Desktop\Projects\E-Commerce-Web-Project\ShopApp\ShopApp.Entities\obj\Debug\netcoreapp3.1\ShopApp.Entities.csprojAssemblyReference.cache
+C:\Users\Mehmet Hamza\Desktop\Projects\E-Commerce-Web-Project\ShopApp\ShopApp.Entities\obj\Debug\netcoreapp3.1\ShopApp.Entities.AssemblyInfoInputs.cache
+C:\Users\Mehmet Hamza\Desktop\Projects\E-Commerce-Web-Project\ShopApp\ShopApp.Entities\obj\Debug\netcoreapp3.1\ShopApp.Entities.AssemblyInfo.cs
+C:\Users\Mehmet Hamza\Desktop\Projects\E-Commerce-Web-Project\ShopApp\ShopApp.Entities\obj\Debug\netcoreapp3.1\ShopApp.Entities.dll
+C:\Users\Mehmet Hamza\Desktop\Projects\E-Commerce-Web-Project\ShopApp\ShopApp.Entities\obj\Debug\netcoreapp3.1\ShopApp.Entities.pdb

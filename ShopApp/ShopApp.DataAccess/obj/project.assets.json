@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "ShopApp.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/ShopApp.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ShopApp.Entities.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ShopApp.Entities/1.0.0": {
+      "type": "project",
+      "path": "../ShopApp.Entities/ShopApp.Entities.csproj",
+      "msbuildProject": "../ShopApp.Entities/ShopApp.Entities.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "ShopApp.Entities >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Mehmet Hamza\\.nuget\\packages\\": {},
@@ -36,7 +55,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Mehmet Hamza\\Desktop\\Projects\\E-Commerce-Web-Project\\ShopApp\\ShopApp.Entities\\ShopApp.Entities.csproj": {
+              "projectPath": "C:\\Users\\Mehmet Hamza\\Desktop\\Projects\\E-Commerce-Web-Project\\ShopApp\\ShopApp.Entities\\ShopApp.Entities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
