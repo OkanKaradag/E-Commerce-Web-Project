@@ -7,10 +7,15 @@ namespace ShopApp.DataAccess.Abstract
     public interface IRepository<TEntity>
     {
         TEntity GetById(int id);
-        TEntity GetOne(Expression<Func<TEntity, bool>> filter);
-        IEnumerable <TEntity> GetAll(Expression<Func<TEntity, bool>> filter=null);
-        void Create();
-        void Update();
-        void Delete();
+        TEntity GetByFilter(Expression<Func<TEntity, bool>> filter);
+        IEnumerable<TEntity> GetAll();
+        IEnumerable<TEntity> GetListByFilter(Expression<Func<TEntity, bool>> filter);
+        void Add(TEntity entity);
+        void AddRange(IEnumerable<TEntity> entities);
+        void Update(TEntity entity);
+        void UpdateRange(IEnumerable<TEntity> entities);
+        void Delete(TEntity entity);
+        void DeleteRange(IEnumerable<TEntity> entities);
+
     }
 }
