@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Concrete\EfCore\" />
     <Folder Include="Concrete\MySql\" />
     <Folder Include="Concrete\Oracle\" />
   </ItemGroup>
