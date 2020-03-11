@@ -5,17 +5,26 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ShopApp.Entities\ShopApp.Entities.csproj" />
+    <Compile Remove="Concrete\MySql\**" />
+    <Compile Remove="Concrete\Oracle\**" />
+    <EmbeddedResource Remove="Concrete\MySql\**" />
+    <EmbeddedResource Remove="Concrete\Oracle\**" />
+    <None Remove="Concrete\MySql\**" />
+    <None Remove="Concrete\Oracle\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Concrete\MySql\" />
-    <Folder Include="Concrete\Oracle\" />
+    <ProjectReference Include="..\ShopApp.Entities\ShopApp.Entities.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Concrete\ORM\Dapper\" />
+    <Folder Include="Concrete\ORM\Hibernate\" />
   </ItemGroup>
 
 </Project>
