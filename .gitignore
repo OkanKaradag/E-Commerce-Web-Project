@@ -353,3 +353,29 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/visualstudio
+
+*.cache
+
+*.props
+
+*.dll
+
+*.exe
+
+*.deps.json
+
+ShopApp/ShopApp.Business/obj/
+
+ShopApp/ShopApp.Business/bin/
+
+ShopApp/ShopApp.DataAccess/obj/
+
+ShopApp/ShopApp.DataAccess/bin/
+
+ShopApp/ShopApp.Entities/obj/
+
+ShopApp/ShopApp.Entities/bin/
+
+ShopApp/ShopApp.WebUI/obj/
+
+ShopApp/ShopApp.WebUI/bin/
