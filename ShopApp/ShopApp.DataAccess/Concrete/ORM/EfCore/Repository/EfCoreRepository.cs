@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ShopApp.DataAccess.Abstract;
 using ShopApp.DataAccess.Abstract.Repository;
 using System;
 using System.Collections.Generic;
@@ -8,40 +7,34 @@ using System.Linq.Expressions;
 
 namespace ShopApp.DataAccess.Concrete.EfCore.Repository
 {
-    public class EfCoreRepository<TEntity, TContext> : IRepository<TEntity>
+    public class EfCoreRepository<TEntity> : IRepository<TEntity>
                                   where TEntity : class
-                                  where TContext : DbContext, new()
     {
+        private readonly DbContext _dbContext;
+
+        public EfCoreRepository(ShopContext shopContext)
+        {
+            _dbContext = shopContext;
+        }
+
         public TEntity GetById(int id)
         {
-            using (var context = new TContext())
-            {
-                return context.Set<TEntity>().Find(id);
-            }
+            return _dbContext.Set<TEntity>().Find(id);
         }
 
         public TEntity GetByFilter(Expression<Func<TEntity, bool>> filter)
         {
-            using (var context = new TContext())
-            {
-                return context.Set<TEntity>().Where(filter).SingleOrDefault();
-            }
+            return _dbContext.Set<TEntity>().Where(filter).SingleOrDefault();
         }
 
         public IEnumerable<TEntity> GetAll()
         {
-            using (var context = new TContext())
-            {
-                return context.Set<TEntity>().ToList();
-            }
+            return _dbContext.Set<TEntity>().ToList();
         }
 
         public IEnumerable<TEntity> GetListByFilter(Expression<Func<TEntity, bool>> filter)
         {
-            using (var context = new TContext())
-            {
-                return context.Set<TEntity>().Where(filter).ToList();
-            }
+            return _dbContext.Set<TEntity>().Where(filter).ToList();
         }
 
         public void Add(TEntity entity)
@@ -51,11 +44,7 @@ namespace ShopApp.DataAccess.Concrete.EfCore.Repository
                 if (entity == null)
                     throw new ArgumentNullException("entity");
 
-                using (var context = new TContext())
-                {
-                    context.Set<TEntity>().Add(entity);
-                    context.SaveChanges();
-                }
+                _dbContext.Set<TEntity>().Add(entity);
             }
             catch (Exception ex)
             {
@@ -71,13 +60,8 @@ namespace ShopApp.DataAccess.Concrete.EfCore.Repository
                 if (entities == null)
                     throw new ArgumentNullException("entities");
 
-                using (var context = new TContext())
-                {
-                    foreach (var entity in entities)
-                        context.Set<TEntity>().Add(entity);
-
-                    context.SaveChanges();
-                }
+                foreach (var entity in entities)
+                _dbContext.Set<TEntity>().Add(entity);
             }
             catch (Exception ex)
             {
@@ -90,11 +74,7 @@ namespace ShopApp.DataAccess.Concrete.EfCore.Repository
         {
             try
             {
-                using (var context = new TContext())
-                {
-                    context.Remove(entity);
-                    context.SaveChanges();
-                }
+                _dbContext.Remove(entity);
             }
             catch (Exception ex)
             {
@@ -107,13 +87,8 @@ namespace ShopApp.DataAccess.Concrete.EfCore.Repository
         {
             try
             {
-                using (var context = new TContext())
-                {
-                    foreach (var entity in entities)
-                        context.Remove(entity);
-
-                    context.SaveChanges();
-                }
+                foreach (var entity in entities)
+                    _dbContext.Remove(entity);
             }
             catch (Exception ex)
             {
@@ -126,11 +101,7 @@ namespace ShopApp.DataAccess.Concrete.EfCore.Repository
         {
             try
             {
-                using (var context = new TContext())
-                {
-                    context.Entry(entity).State = EntityState.Modified;
-                    context.SaveChanges();
-                }
+                _dbContext.Entry(entity).State = EntityState.Modified;
             }
             catch (Exception ex)
             {
@@ -143,13 +114,8 @@ namespace ShopApp.DataAccess.Concrete.EfCore.Repository
         {
             try
             {
-                using (var context = new TContext())
-                {
-                    foreach (var entity in entities)
-                        context.Entry(entity).State = EntityState.Modified;
-
-                    context.SaveChanges();
-                }
+                foreach (var entity in entities)
+                    _dbContext.Entry(entity).State = EntityState.Modified;
             }
             catch (Exception ex)
             {
