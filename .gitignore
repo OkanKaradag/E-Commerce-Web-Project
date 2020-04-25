@@ -356,6 +356,8 @@ MigrationBackup/
 
 *.cache
 
+*.dtbcache
+
 *.props
 
 *.dll
