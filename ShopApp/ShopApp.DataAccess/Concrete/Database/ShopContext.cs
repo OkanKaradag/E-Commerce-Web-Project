@@ -11,6 +11,12 @@ namespace ShopApp.DataAccess.Concrete
             optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB; Database=ShopApp;integrated security=true;");
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //TODO: Create relations
+            base.OnModelCreating(modelBuilder);
+        }
+
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Order> Orders { get; set; }
