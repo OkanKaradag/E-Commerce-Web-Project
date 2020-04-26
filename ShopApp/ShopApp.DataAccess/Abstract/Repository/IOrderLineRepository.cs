@@ -2,7 +2,7 @@
 using ShopApp.Entities;
 namespace ShopApp.DataAccess.Abstract.DAL
 {
-    public interface IOrderLineDal : IRepository<OrderLine>
+    public interface IOrderLineRepository : IRepository<OrderLine>
     {
         decimal GetTotalPriceOfUnit();
     }
