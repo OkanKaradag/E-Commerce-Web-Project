@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ShopApp.DataAccess.Concrete.ORM.EfCore.Repository
 {
-    public class EfUnitOfWork : IUnitOfWork       
+    public class EfCoreUnitOfWork : IUnitOfWork       
     {
         private readonly ShopContext _dbContext;
 
-        public EfUnitOfWork(ShopContext dbContext)
+        public EfCoreUnitOfWork(ShopContext dbContext)
         {
             _dbContext = dbContext;
         }
