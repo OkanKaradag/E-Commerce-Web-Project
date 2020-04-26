@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ShopApp.DataAccess.Abstract.DAL
 {
-    public interface ICategoryDal : IRepository<Category>
+    public interface ICategoryRepository : IRepository<Category>
     {
         IEnumerable<Category> GetSubCategories(int categoryId);
     }
