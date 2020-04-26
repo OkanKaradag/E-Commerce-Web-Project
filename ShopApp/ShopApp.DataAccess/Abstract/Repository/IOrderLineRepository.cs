@@ -1,10 +1,9 @@
 ﻿using ShopApp.DataAccess.Abstract.Repository;
 using ShopApp.Entities;
-
 namespace ShopApp.DataAccess.Abstract.DAL
 {
-    public interface IOrderDal : IRepository<Order>
+    public interface IOrderLineRepository : IRepository<OrderLine>
     {
-        Order GetMostExpensiveOrder();
+        decimal GetTotalPriceOfUnit();
     }
 }

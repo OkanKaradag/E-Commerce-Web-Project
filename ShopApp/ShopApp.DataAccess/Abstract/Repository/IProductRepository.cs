@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ShopApp.DataAccess.Abstract.DAL
 {
-    public interface IProductDal : IRepository<Product>
+    public interface IProductRepository : IRepository<Product>
     {
         IEnumerable<Product> GetPopularProducts();
     }
