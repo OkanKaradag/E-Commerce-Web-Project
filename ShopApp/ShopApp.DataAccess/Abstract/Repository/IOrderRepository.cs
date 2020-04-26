@@ -3,7 +3,7 @@ using ShopApp.Entities;
 
 namespace ShopApp.DataAccess.Abstract.DAL
 {
-    public interface IOrderDal : IRepository<Order>
+    public interface IOrderRepository : IRepository<Order>
     {
         Order GetMostExpensiveOrder();
     }
