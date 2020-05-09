@@ -8,11 +8,11 @@ namespace ShopApp.DataAccess.Concrete.EfCore.DAL
 {
     public class EfCoreCategoryRepository : EfCoreRepository<Category>, ICategoryRepository
     {
-        private readonly DbContext _dbContext;
+        private readonly ShopContext _dbContext;
 
-        public EfCoreCategoryRepository(ShopContext shopContext) : base(shopContext)
+        public EfCoreCategoryRepository(ShopContext dbContext) : base(dbContext)
         {
-            _dbContext = shopContext;
+            _dbContext = dbContext;
         }
 
         public IEnumerable<Category> GetSubCategories(int categoryId)

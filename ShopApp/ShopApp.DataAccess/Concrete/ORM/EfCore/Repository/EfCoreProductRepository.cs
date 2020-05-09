@@ -8,11 +8,11 @@ namespace ShopApp.DataAccess.Concrete.EfCore.DAL
 {
     public class EfCoreProductRepository : EfCoreRepository<Product>, IProductRepository
     {
-        private readonly DbContext _dbContext;
+        private readonly ShopContext _dbContext;
 
-        public EfCoreProductRepository(ShopContext shopContext) : base(shopContext)
+        public EfCoreProductRepository(ShopContext dbContext) : base(dbContext)
         {
-            _dbContext = shopContext;
+            _dbContext = dbContext;
         }
 
         public IEnumerable<Product> GetPopularProducts()

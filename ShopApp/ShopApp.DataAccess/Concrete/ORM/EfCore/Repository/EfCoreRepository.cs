@@ -10,11 +10,11 @@ namespace ShopApp.DataAccess.Concrete.EfCore.Repository
     public class EfCoreRepository<TEntity> : IRepository<TEntity>
                                   where TEntity : class
     {
-        private readonly DbContext _dbContext;
+        private readonly ShopContext _dbContext;
 
-        public EfCoreRepository(ShopContext shopContext)
+        public EfCoreRepository(ShopContext dbContext)
         {
-            _dbContext = shopContext;
+            _dbContext = dbContext;
         }
 
         public TEntity GetById(int id)

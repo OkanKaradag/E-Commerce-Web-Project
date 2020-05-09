@@ -16,6 +16,5 @@ namespace ShopApp.DataAccess.Abstract.Repository
         void UpdateRange(IEnumerable<TEntity> entities);
         void Delete(TEntity entity);
         void DeleteRange(IEnumerable<TEntity> entities);
-
     }
 }

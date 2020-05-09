@@ -8,11 +8,11 @@ namespace ShopApp.DataAccess.Concrete.ORM.EfCore.DAL
 {
     public class EfCoreOrderRepository : EfCoreRepository<Order>, IOrderRepository
     {
-        private readonly DbContext _dbContext;
+        private readonly ShopContext _dbContext;
 
-        public EfCoreOrderRepository(ShopContext shopContext) : base(shopContext)
+        public EfCoreOrderRepository(ShopContext dbContext) : base(dbContext)
         {
-            _dbContext = shopContext;
+            _dbContext = dbContext;
         }
 
         public Order GetMostExpensiveOrder()

@@ -7,11 +7,11 @@ namespace ShopApp.DataAccess.Concrete.ORM.EfCore.DAL
 {
     public class EfCoreOrderLineRepository : EfCoreRepository<OrderLine>, IOrderLineRepository
     {
-        private readonly DbContext _dbContext;
+        private readonly ShopContext _dbContext;
 
-        public EfCoreOrderLineRepository(ShopContext shopContext) : base(shopContext)
+        public EfCoreOrderLineRepository(ShopContext dbContext) : base(dbContext)
         {
-            _dbContext = shopContext;
+            _dbContext = dbContext;
         }
 
         public decimal GetTotalPriceOfUnit()
