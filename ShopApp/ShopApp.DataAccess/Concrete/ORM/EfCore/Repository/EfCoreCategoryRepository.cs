@@ -1,10 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ShopApp.DataAccess.Abstract.DAL;
-using ShopApp.DataAccess.Concrete.EfCore.Repository;
+﻿using ShopApp.DataAccess.Abstract.Repository;
 using ShopApp.Entities;
 using System.Collections.Generic;
 
-namespace ShopApp.DataAccess.Concrete.EfCore.DAL
+namespace ShopApp.DataAccess.Concrete.EfCore.Repository
 {
     public class EfCoreCategoryRepository : EfCoreRepository<Category>, ICategoryRepository
     {

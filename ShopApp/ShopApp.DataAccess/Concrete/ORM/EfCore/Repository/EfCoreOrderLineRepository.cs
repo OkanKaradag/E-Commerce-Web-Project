@@ -1,9 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ShopApp.DataAccess.Abstract.DAL;
+﻿using ShopApp.DataAccess.Abstract.Repository;
 using ShopApp.DataAccess.Concrete.EfCore.Repository;
 using ShopApp.Entities;
 
-namespace ShopApp.DataAccess.Concrete.ORM.EfCore.DAL
+namespace ShopApp.DataAccess.Concrete.ORM.EfCore.Repository
 {
     public class EfCoreOrderLineRepository : EfCoreRepository<OrderLine>, IOrderLineRepository
     {

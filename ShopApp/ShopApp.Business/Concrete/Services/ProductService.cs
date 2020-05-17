@@ -1,5 +1,4 @@
-﻿using ShopApp.DataAccess.Abstract.DAL;
-using ShopApp.DataAccess.Concrete.EfCore.DAL;
+﻿using ShopApp.DataAccess.Abstract.Repository;
 using ShopApp.Entities;
 using System;
 using System.Collections.Generic;
