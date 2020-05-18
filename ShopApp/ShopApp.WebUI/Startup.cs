@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ShopApp.Business.Abstract.Services;
+using ShopApp.Business.Concrete.Services;
 using ShopApp.DataAccess.Abstract.Repository;
 using ShopApp.DataAccess.Concrete;
 using ShopApp.DataAccess.Concrete.ORM.EfCore.Repository;
@@ -24,6 +26,13 @@ namespace ShopApp.WebUI
             services.AddTransient<IOrderRepository, EfCoreOrderRepository>();
             services.AddTransient<IOrderLineRepository, EfCoreOrderLineRepository>();
             services.AddTransient<ICategoryRepository, EfCoreCategoryRepository>();
+            #endregion
+
+            #region Service Injection
+            services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IOrderService, OrderService>();
+            services.AddTransient<IOrderLineService, OrderLineService>();
+            services.AddTransient<ICategoryService, CategoryService>();
             #endregion
         }
 
