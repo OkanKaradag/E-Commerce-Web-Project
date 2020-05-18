@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using ShopApp.Business.Abstract.Services;
 using ShopApp.Business.Concrete.Services;
 using ShopApp.DataAccess.Abstract.Repository;
+using ShopApp.DataAccess.Abstract.UnitOfWork;
 using ShopApp.DataAccess.Concrete;
 using ShopApp.DataAccess.Concrete.ORM.EfCore.Repository;
 
@@ -19,6 +20,10 @@ namespace ShopApp.WebUI
         {
             #region DbContext Injection
             services.AddDbContext<ShopContext>();
+            #endregion
+
+            #region UnitOfWork Injection
+            services.AddSingleton<IUnitOfWork, EfCoreUnitOfWork>();
             #endregion
 
             #region Repository Injection
