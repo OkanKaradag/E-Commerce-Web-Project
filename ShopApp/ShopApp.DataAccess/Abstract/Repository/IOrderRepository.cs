@@ -1,7 +1,6 @@
-﻿using ShopApp.DataAccess.Abstract.Repository;
-using ShopApp.Entities;
+﻿using ShopApp.Entities;
 
-namespace ShopApp.DataAccess.Abstract.DAL
+namespace ShopApp.DataAccess.Abstract.Repository
 {
     public interface IOrderRepository : IRepository<Order>
     {

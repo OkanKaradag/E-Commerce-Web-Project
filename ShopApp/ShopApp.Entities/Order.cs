@@ -1,5 +1,4 @@
-﻿
-namespace ShopApp.Entities
+﻿namespace ShopApp.Entities
 {
     public class Order : BaseEntity
     {

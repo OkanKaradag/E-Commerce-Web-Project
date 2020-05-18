@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace ShopApp.DataAccess.Abstract.Repository
+namespace ShopApp.Business.Abstract
 {
-    public interface IRepository<TEntity>
+    public interface IService<TEntity>
     {
         TEntity GetById(int id);
         TEntity GetByFilter(Expression<Func<TEntity, bool>> filter);

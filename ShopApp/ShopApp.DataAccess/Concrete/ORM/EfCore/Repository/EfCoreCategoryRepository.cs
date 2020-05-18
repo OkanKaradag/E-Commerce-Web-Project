@@ -1,18 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ShopApp.DataAccess.Abstract.DAL;
-using ShopApp.DataAccess.Concrete.EfCore.Repository;
+﻿using ShopApp.DataAccess.Abstract.Repository;
 using ShopApp.Entities;
 using System.Collections.Generic;
 
-namespace ShopApp.DataAccess.Concrete.EfCore.DAL
+namespace ShopApp.DataAccess.Concrete.EfCore.Repository
 {
     public class EfCoreCategoryRepository : EfCoreRepository<Category>, ICategoryRepository
     {
-        private readonly DbContext _dbContext;
+        private readonly ShopContext _dbContext;
 
-        public EfCoreCategoryRepository(ShopContext shopContext) : base(shopContext)
+        public EfCoreCategoryRepository(ShopContext dbContext) : base(dbContext)
         {
-            _dbContext = shopContext;
+            _dbContext = dbContext;
         }
 
         public IEnumerable<Category> GetSubCategories(int categoryId)

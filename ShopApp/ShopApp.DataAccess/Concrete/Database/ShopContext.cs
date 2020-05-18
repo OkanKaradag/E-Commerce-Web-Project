@@ -7,7 +7,7 @@ namespace ShopApp.DataAccess.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //You can use another database provider
+            //You can use another database provider(PostgreSQL,MySql,Oracle,...)
             optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB; Database=ShopApp;integrated security=true;");
         }
 

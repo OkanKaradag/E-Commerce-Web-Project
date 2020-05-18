@@ -2,7 +2,7 @@
 using ShopApp.Entities;
 using System.Collections.Generic;
 
-namespace ShopApp.DataAccess.Abstract.DAL
+namespace ShopApp.DataAccess.Abstract.Repository
 {
     public interface IProductRepository : IRepository<Product>
     {
