@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ShopApp.DataAccess.Abstract.Repository;
 using ShopApp.DataAccess.Concrete;
+using ShopApp.DataAccess.Concrete.ORM.EfCore.Repository;
 
 namespace ShopApp.WebUI
 {
@@ -15,6 +17,13 @@ namespace ShopApp.WebUI
         {
             #region DbContext Injection
             services.AddDbContext<ShopContext>();
+            #endregion
+
+            #region Repository Injection
+            services.AddTransient<IProductRepository, EfCoreProductRepository>();
+            services.AddTransient<IOrderRepository, EfCoreOrderRepository>();
+            services.AddTransient<IOrderLineRepository, EfCoreOrderLineRepository>();
+            services.AddTransient<ICategoryRepository, EfCoreCategoryRepository>();
             #endregion
         }
 
