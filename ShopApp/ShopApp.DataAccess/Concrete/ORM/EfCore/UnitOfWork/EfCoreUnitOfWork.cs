@@ -1,6 +1,5 @@
 ﻿using ShopApp.DataAccess.Abstract.Repository;
 using ShopApp.DataAccess.Abstract.UnitOfWork;
-using ShopApp.DataAccess.Concrete.EfCore.Repository;
 using System;
 using System.Threading;
 using System.Threading.Tasks;

@@ -1,10 +1,11 @@
-﻿using ShopApp.DataAccess.Abstract.Repository;
+﻿using ShopApp.Business.Abstract.Services;
+using ShopApp.DataAccess.Abstract.Repository;
 using ShopApp.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace ShopApp.Business.Abstract.Services
+namespace ShopApp.Business.Concrete.Services
 {
     public class ProductService : IProductService
     {

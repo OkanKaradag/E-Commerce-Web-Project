@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace ShopApp.DataAccess.Concrete.EfCore.Repository
+namespace ShopApp.DataAccess.Concrete.ORM.EfCore.Repository
 {
     public class EfCoreRepository<TEntity> : IRepository<TEntity>
                                   where TEntity : class

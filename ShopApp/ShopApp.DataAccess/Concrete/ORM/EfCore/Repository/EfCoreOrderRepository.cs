@@ -1,5 +1,4 @@
 ﻿using ShopApp.DataAccess.Abstract.Repository;
-using ShopApp.DataAccess.Concrete.EfCore.Repository;
 using ShopApp.Entities;
 using System;
 

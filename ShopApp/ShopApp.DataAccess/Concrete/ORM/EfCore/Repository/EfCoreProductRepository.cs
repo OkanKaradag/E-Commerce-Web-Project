@@ -1,9 +1,8 @@
 ﻿using ShopApp.DataAccess.Abstract.Repository;
-using ShopApp.DataAccess.Concrete.EfCore.Repository;
 using ShopApp.Entities;
 using System.Collections.Generic;
 
-namespace ShopApp.DataAccess.Concrete.EfCore.DAL
+namespace ShopApp.DataAccess.Concrete.ORM.EfCore.Repository
 {
     public class EfCoreProductRepository : EfCoreRepository<Product>, IProductRepository
     {

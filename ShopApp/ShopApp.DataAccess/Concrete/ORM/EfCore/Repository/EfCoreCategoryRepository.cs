@@ -2,7 +2,7 @@
 using ShopApp.Entities;
 using System.Collections.Generic;
 
-namespace ShopApp.DataAccess.Concrete.EfCore.Repository
+namespace ShopApp.DataAccess.Concrete.ORM.EfCore.Repository
 {
     public class EfCoreCategoryRepository : EfCoreRepository<Category>, ICategoryRepository
     {
